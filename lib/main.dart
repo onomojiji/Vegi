@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:vegi/auth/sign_in.dart';
 import 'package:vegi/screens/home/home.dart';
+import 'package:vegi/config/color.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -15,6 +16,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: primaryColor,
+        scaffoldBackgroundColor: scaffoldBackgroungColor,
+      ),
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
